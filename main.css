@@ -111,6 +111,8 @@ h1 {
 
 }
 
+
+
 .footer{
     display: flex;
     position: absolute;
@@ -118,6 +120,43 @@ h1 {
     z-index: 8000;
     padding: 20px;
 }
+
+@media (max-width: 600px) {
+    .logo-img {
+        width: 200px;  /* Riduce la larghezza */
+        font-size: 18px;  /* Riduce la dimensione del testo */
+        line-height: 200px; /* Adatta l'altezza della linea */
+    }
+
+    .logo{
+        display: flex;
+        position: relative;
+    }
+
+    .footer{
+        display:flex;
+        position: relative;
+        padding: 20px;
+        margin-top: 50px;
+        align-items: normal;
+        justify-content: center;
+        text-align: left;
+    }
+
+    body {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #151515;
+        display:list-item;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
 
 /* Yellow background section */
 .highlight-box {
