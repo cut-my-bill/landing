@@ -9,6 +9,10 @@ body, html {
     text-align: center;
 }
 
+a {
+    color: #ff9900;
+}
+
 /* Full-height background image */
 .bg-image {
     background-image: url('pikaso_text-to-image_a-male-Caucasian-in-his-30s-wearing-a-graphic-tshi-original.jpeg');
@@ -66,12 +70,12 @@ h1 {
 
 /* Semi-transparent background section small font */
 .legal-box {
-    background-color: rgba(128, 128, 128, 0.4); /* Grey with transparency */
+    background-color: rgba(128, 128, 128, 0.65); /* Grey with transparency */
     color: rgb(38, 36, 36);
     padding: 20px;
+    padding-bottom: 40px;
     margin-top: 20px;
     font-size: 16px;
-    /*display:flex;*/
     align-items:center;
     justify-content: left;
 }
@@ -107,6 +111,13 @@ h1 {
 
 }
 
+.footer{
+    display: flex;
+    position: absolute;
+    bottom:0;
+    z-index: 8000;
+    padding: 20px;
+}
 
 /* Yellow background section */
 .highlight-box {
