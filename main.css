@@ -29,7 +29,12 @@ a {
 
 /* Container for content */
 .content {
+    height: 100%;
     padding: 20px;
+    place-self: baseline;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 /* Main heading */
@@ -63,7 +68,7 @@ h1 {
     margin-top: 20px;
     font-size: 24px;
     display:flex;
-    align-items:center;
+    align-items:left;
     justify-content: center;
 }
 
