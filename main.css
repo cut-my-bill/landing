@@ -135,7 +135,12 @@ h1 {
 }
 
 @media (max-width: 600px) {
-
+    .logo-img {
+        width: 200px;  /* Riduce la larghezza */
+        font-size: 18px;  /* Riduce la dimensione del testo */
+        line-height: 200px; /* Adatta l'altezza della linea */
+    }
+    
     .cta-group{
         padding-top: 4em;
     }
