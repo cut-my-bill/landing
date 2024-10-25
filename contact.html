@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Riduci la bolletta del tuo cloud</title>
+   
+    <meta property="og:title" content="Riduci la bolletta del tuo cloud" />
+    <meta name="author" content="davide" />
+    <meta property="og:locale" content="it_IT" />
+    <meta name="description" content="CutMyBill.Cloud è servizio che consente di ottimizzare i costi dei vostri sistemi cloud." />
+    <meta property="og:description" content="CutMyBill.Cloud è servizio che consente di ottimizzare i costi dei vostri sistemi cloud." />
+    <link rel="canonical" href="https://cutmybill.cloud/" />
+    <meta property="og:url" content="https://cutmybill.cloud/" />
+    <meta property="og:site_name" content="CutMyBill.Cloud" />
+    <meta property="og:image" content="https://cutmybill.cloud/cover.jpeg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="https://cutmybill.cloud/cover.jpeg" />
+    <meta property="twitter:title" content="Riduci la bolletta del tuo cloud" />
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16746368712">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16746368712');
+    </script>    
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="4ca0ee1e-e25f-4448-a0a1-e42174577915"></script>     
+</head>
+<body>
+    
+    <div class="bg-image">
+        
+    </div>
+    
+    <div class="content">
+        <div class="logo"> <img src="logo.png" class="logo-img"></img></div>
+       
+        <!-- Main heading -->
+        <div class="cta-group">
+            <h1>Scrivici e ridurremo i costi del tuo cloud</h1>
+            <div>
+    
+                <form id="requestForm">
+                    <label for="email">Tuo Indirizzo Email (per essere ricontattato):</label><br>
+                    <input type="email" id="email" name="email" required style="width: 70%; min-height: 2em;"><br><br>
+                    <input type="hidden" id="origin" name="origin" value="cutmybill">
+                    <label for="message">Messaggio:</label><br>
+                    <textarea id="message" name="message" rows="6" cols="40" style="width: 70%;"></textarea><br><br>
+                    <a href="/privacy" target="_blank">Ho preso visione della privacy policy</a>
+                    <button type="submit" style="border: 0; height: 2.5em; width: 10em;background-color: rgb(243, 204, 7); color: rgb(4, 14, 24); border-radius: 20px;">Invia</button>
+                </form>
+            </div>
+
+        </div> 
+
+        <!-- Info box with semi-transparent background -->
+ 
+
+        <div class="footer">
+            <p>
+                <a href="privacy.html" target="_blank">Privacy</a>
+                &nbsp;
+                <a href="terms.html">Termini e condizioni del servizio.</a>
+                &nbsp;
+                Questo sito usa esclusivamente cookie tecnici. <a href="cookies.html">Leggi l'informativa</a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+<script>
+    document.getElementById('requestForm').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Previene il comportamento predefinito del form (invio e ricaricamento della pagina)
+
+        // Prendi i dati dal form
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const origin = document.getElementById('origin').value;
+
+        // Invia i dati al server tramite fetch
+        try {
+            const response = await fetch('https://eofi05xhwpn0mig.m.pipedream.net/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email,
+                    message: message,
+                    origin: origin
+                })
+            });
+
+        
+            if (response.ok) {
+                window.location.href="thankyou.html"
+            } else {
+                window.location.href="404.html"
+            }
+
+
+        } catch (error) {
+            // In caso di errore nella fetch (problema di rete, ecc.)
+            const responseMessage = document.getElementById('responseMessage');
+            responseMessage.style.color = 'red';
+            responseMessage.textContent = 'Something went wrong. Try again.';
+            responseMessage.style.display = 'block';
+        }
+    });
+</script>
+
+
+
+</body>
+
+<script defer src="https://eovio7ckswc200k.m.pipedream.net/contact.js"></script>
+
+
+
+
+
+
+</html>
